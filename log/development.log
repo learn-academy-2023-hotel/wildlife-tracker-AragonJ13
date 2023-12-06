@@ -1,0 +1,263 @@
+  [1m[35m (962.2ms)[0m  [1m[35mCREATE DATABASE "rails_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (500.6ms)[0m  [1m[35mCREATE DATABASE "rails_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (111.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4598764919443922325)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (190.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAnimals (20231205224416)
+  [1m[36mTRANSACTION (34.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (141.1ms)[0m  [1m[35mCREATE TABLE "animals" ("id" bigserial primary key, "name" character varying, "binomial" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (10.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20231205224416"]]
+  [1m[36mTRANSACTION (71.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (4.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-12-05 22:45:25.916806"], ["updated_at", "2023-12-05 22:45:25.916806"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(4598764919443922325)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-12-05 14:52:07 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 13.5ms | Allocations: 635)
+Completed 200 OK in 114ms (Views: 33.6ms | ActiveRecord: 0.0ms | Allocations: 7399)
+
+
+Started GET "/" for ::1 at 2023-12-05 14:52:26 -0800
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.3ms | Allocations: 272)
+Completed 200 OK in 42ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 945)
+
+
+Started GET "/" for ::1 at 2023-12-05 14:52:55 -0800
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 14)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 222)
+
+
+Started GET "/" for ::1 at 2023-12-05 14:53:02 -0800
+Processing by Rails::WelcomeController#index as */*
+  Rendering /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/learnacademy/.rvm/gems/ruby-3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 14)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 220)
+
+
+Started GET "/animal" for ::1 at 2023-12-05 14:54:13 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animal"):
+  
+Started GET "/animal" for ::1 at 2023-12-05 14:54:27 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animal"):
+  
+Started GET "/animal" for ::1 at 2023-12-05 14:55:31 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animal"):
+  
+Started GET "/animal" for ::1 at 2023-12-05 14:55:37 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animal"):
+  
+Started GET "/animal" for ::1 at 2023-12-05 14:56:07 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animal"):
+  
+Started GET "/animal" for ::1 at 2023-12-05 14:56:14 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animal"):
+  
+  [1m[36mAnimal Load (1.8ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimal Create (3.4ms)[0m  [1m[32mINSERT INTO "animals" ("name", "binomial", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dog"], ["binomial", "Canis lupus familiaris"], ["created_at", "2023-12-05 23:01:29.360199"], ["updated_at", "2023-12-05 23:01:29.360199"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimal Create (0.4ms)[0m  [1m[32mINSERT INTO "animals" ("name", "binomial", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cat"], ["binomial", "Felis catus"], ["created_at", "2023-12-05 23:02:10.871420"], ["updated_at", "2023-12-05 23:02:10.871420"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAnimal Create (0.5ms)[0m  [1m[32mINSERT INTO "animals" ("name", "binomial", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Snake"], ["binomial", "Serpentes"], ["created_at", "2023-12-05 23:02:54.169819"], ["updated_at", "2023-12-05 23:02:54.169819"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/animal" for ::1 at 2023-12-05 15:03:31 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/animal"):
+  
+Started GET "/animals" for ::1 at 2023-12-05 15:04:41 -0800
+Processing by AnimalsController#index as */*
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 1084)
+
+
+  
+NameError (undefined local variable or method `animal' for #<AnimalsController:0x00000000013e48>):
+  
+app/controllers/animals_controller.rb:5:in `index'
+Started GET "/animals" for ::1 at 2023-12-05 15:06:16 -0800
+Processing by AnimalsController#index as */*
+  [1m[36mAnimal Load (6.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:5:in `index'
+Completed 200 OK in 377ms (Views: 132.3ms | ActiveRecord: 227.3ms | Allocations: 8959)
+
+
+Started POST "/animals" for ::1 at 2023-12-05 15:18:13 -0800
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "name": "Lion",
+    "binomial": "Panthera leo",
+}
+Processing by AnimalsController#create as */*
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 438)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x0000000001bfd0>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animals" for ::1 at 2023-12-05 15:18:23 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 89.7ms | Allocations: 444)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x0000000001c070>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animals" for ::1 at 2023-12-05 15:19:03 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x0000000001c3e0>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animals" for ::1 at 2023-12-05 15:20:10 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x0000000001c750>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animals" for ::1 at 2023-12-05 15:20:38 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x0000000001cac0>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animals" for ::1 at 2023-12-05 15:20:52 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x0000000001cde0>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animal" for ::1 at 2023-12-05 15:21:06 -0800
+  
+ActionController::RoutingError (No route matches [POST] "/animal"):
+  
+Started POST "/animals" for ::1 at 2023-12-05 15:21:22 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x0000000001d3a8>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animals" for ::1 at 2023-12-05 15:22:36 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x0000000001d718>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animals" for ::1 at 2023-12-05 15:23:14 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 46.9ms | Allocations: 446)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x00000000021980>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animals" for ::1 at 2023-12-05 15:24:12 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 3.8ms | Allocations: 446)
+
+
+  
+NameError (undefined local variable or method `animal_params' for #<AnimalsController:0x00000000025c10>):
+  
+app/controllers/animals_controller.rb:9:in `create'
+Started POST "/animals" for ::1 at 2023-12-05 15:24:30 -0800
+Processing by AnimalsController#create as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+  [1m[36mTRANSACTION (26.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[36mAnimal Create (1.1ms)[0m  [1m[32mINSERT INTO "animals" ("name", "binomial", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lion"], ["binomial", "Panthera leo"], ["created_at", "2023-12-05 23:24:32.048831"], ["updated_at", "2023-12-05 23:24:32.048831"]]
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/animals_controller.rb:9:in `create'
+Completed 200 OK in 69ms (Views: 0.5ms | ActiveRecord: 39.0ms | Allocations: 4425)
+
+
+Started PATCH "/animals/2" for ::1 at 2023-12-05 15:30:08 -0800
+Processing by AnimalsController#update as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "id"=>"2", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+  [1m[36mAnimal Load (0.9ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/animals_controller.rb:19:in `update'
+  [1m[36mAnimal Update (5.5ms)[0m  [1m[33mUPDATE "animals" SET "name" = $1, "binomial" = $2, "updated_at" = $3 WHERE "animals"."id" = $4[0m  [["name", "Lion"], ["binomial", "Panthera leo"], ["updated_at", "2023-12-05 23:30:09.900023"], ["id", 2]]
+  ↳ app/controllers/animals_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/animals_controller.rb:19:in `update'
+Completed 200 OK in 60ms (Views: 0.6ms | ActiveRecord: 71.4ms | Allocations: 5690)
+
+
+  [1m[36mAnimal Load (1.4ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+Started DELETE "/animals/2" for ::1 at 2023-12-05 15:39:23 -0800
+Processing by AnimalsController#destroy as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "id"=>"2", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+  [1m[36mAnimal Load (1.8ms)[0m  [1m[34mSELECT "animals".* FROM "animals" WHERE "animals"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/animals_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (21.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/animals_controller.rb:29:in `destroy'
+  [1m[36mAnimal Destroy (0.7ms)[0m  [1m[31mDELETE FROM "animals" WHERE "animals"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/animals_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/animals_controller.rb:29:in `destroy'
+Completed 200 OK in 51ms (Views: 3.7ms | ActiveRecord: 114.1ms | Allocations: 4117)
+
+
+Started DELETE "/animals/" for ::1 at 2023-12-05 15:39:32 -0800
+  
+ActionController::RoutingError (No route matches [DELETE] "/animals"):
+  
+Started GET "/animals/" for ::1 at 2023-12-05 15:39:44 -0800
+Processing by AnimalsController#index as */*
+  Parameters: {"name"=>"Lion", "binomial"=>"Panthera leo", "animal"=>{"name"=>"Lion", "binomial"=>"Panthera leo"}}
+  [1m[36mAnimal Load (1.1ms)[0m  [1m[34mSELECT "animals".* FROM "animals"[0m
+  ↳ app/controllers/animals_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 41.8ms | ActiveRecord: 1.1ms | Allocations: 1030)
+
+
